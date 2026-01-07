@@ -1,55 +1,99 @@
 class AppNavbar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 border-b border-transparent">
-                <div class="container mx-auto px-6 flex justify-between items-center">
+            <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 border-b border-transparent bg-transparent">
+                <div class="container mx-auto px-6 flex justify-between items-center relative">
+                    
                     <a href="#" class="font-display text-2xl font-bold tracking-wider italic text-white">
-                        HIGHLINE<span class="text-brand-red">DETAIL</span>
+                        HIGHLINE<span class="text-[#D90429]">DETAIL</span>
                     </a>
 
                     <div class="hidden md:flex space-x-8 text-sm font-medium text-white">
-                        <a href="#home" class="hover:text-brand-red transition-colors">HOME</a>
-                        <a href="#servicos" class="hover:text-brand-red transition-colors">SERVIÇOS</a>
-                        <a href="#sobre" class="hover:text-brand-red transition-colors">A OFICINA</a>
+                        <a href="#home" class="hover:text-[#D90429] transition-colors">HOME</a>
+                        <a href="#services" class="hover:text-[#D90429] transition-colors">SERVIÇOS</a>
+                        <a href="#about" class="hover:text-[#D90429] transition-colors">A OFICINA</a>
                     </div>
 
-                    <button id="nav-cta" class="hidden md:block px-6 py-2 border border-brand-red text-brand-red font-bold rounded hover:bg-brand-red hover:text-white transition-all btn-glow uppercase text-sm tracking-wide">
+                    <button id="nav-cta" class="hidden md:block px-6 py-2 border border-[#D90429] text-[#D90429] font-bold rounded hover:bg-[#D90429] hover:text-white transition-all btn-glow uppercase text-sm tracking-wide">
                         Agendar Agora
                     </button>
 
-                    <button class="md:hidden text-white text-2xl">
+                    <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
                         &#9776;
                     </button>
+                </div>
+
+                <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#161616] border-b border-[#2B2B2B] shadow-2xl">
+                    <div class="flex flex-col p-6 space-y-4 text-center">
+                        <a href="#home" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">HOME</a>
+                        <a href="#services" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">SERVIÇOS</a>
+                        <a href="#about" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">A OFICINA</a>
+                        <button id="mobile-cta" class="w-full mt-4 px-6 py-3 bg-[#D90429] text-white font-bold rounded uppercase tracking-wide hover:bg-red-700">
+                            Agendar Agora
+                        </button>
+                    </div>
                 </div>
             </nav>
         `;
 
         this.setupScrollEffect();
         this.setupEvents();
+        this.setupMobileMenu(); // Nova função iniciada
     }
 
     setupScrollEffect() {
         const nav = this.querySelector('nav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                // Estado "Scrolled": Fundo escuro + Blur
-                nav.classList.add('bg-brand-black/90', 'backdrop-blur-md', 'shadow-lg', 'border-brand-border');
-                nav.classList.remove('border-transparent', 'py-4');
-                nav.classList.add('py-2'); // Fica mais compacto ao rolar
+                // Ajustei as cores para hex direto (#161616) para garantir compatibilidade se a classe customizada falhar
+                nav.classList.add('bg-[#161616]/95', 'backdrop-blur-md', 'shadow-lg', 'border-[#2B2B2B]');
+                nav.classList.remove('border-transparent', 'py-4', 'bg-transparent');
+                nav.classList.add('py-2'); 
             } else {
-                // Estado "Topo": Transparente
-                nav.classList.remove('bg-brand-black/90', 'backdrop-blur-md', 'shadow-lg', 'border-brand-border', 'py-2');
-                nav.classList.add('border-transparent', 'py-4');
+                nav.classList.remove('bg-[#161616]/95', 'backdrop-blur-md', 'shadow-lg', 'border-[#2B2B2B]', 'py-2');
+                nav.classList.add('border-transparent', 'py-4', 'bg-transparent');
             }
         });
     }
 
     setupEvents() {
-        // Dispara evento global para abrir o modal
-        const btn = this.querySelector('#nav-cta');
-        if(btn) {
-            btn.addEventListener('click', () => {
+        // CTA Desktop
+        const btnDesktop = this.querySelector('#nav-cta');
+        if(btnDesktop) {
+            btnDesktop.addEventListener('click', () => {
                 window.dispatchEvent(new CustomEvent('open-modal'));
+            });
+        }
+
+        // CTA Mobile (Novo)
+        const btnMobile = this.querySelector('#mobile-cta');
+        if(btnMobile) {
+            btnMobile.addEventListener('click', () => {
+                // Fecha o menu antes de abrir o modal
+                const menu = this.querySelector('#mobile-menu');
+                menu.classList.add('hidden');
+                window.dispatchEvent(new CustomEvent('open-modal'));
+            });
+        }
+    }
+
+    
+    setupMobileMenu() {
+        const btn = this.querySelector('#mobile-menu-btn');
+        const menu = this.querySelector('#mobile-menu');
+        const links = this.querySelectorAll('.mobile-link');
+
+        if (btn && menu) {
+            // Toggle (Abrir/Fechar)
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Fechar ao clicar em um link
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
             });
         }
     }
