@@ -222,9 +222,9 @@ class AppModal extends HTMLElement {
             }
 
             // Mensagem atualizada
-            const message = `*NOVO AGENDAMENTO (SITE)*%0A%0A👤 *Nome:* ${data.name}%0A🎂 *Nasc:* ${birthFormatted}%0A📱 *WhatsApp:* ${data.phone}%0A🚗 *Carro:* ${data.car}%0A🧽 *Sujeira:* ${data.dirtLevel}%0A🛠 *Serviço:* ${data.service}%0A📅 *Data:* ${serviceDateFormatted}%0A⏰ *Horário:* ${data.time}`;
+            const message = `NOVO AGENDAMENTO (SITE)%0A%0A Nome: ${data.name}%0A Nasc: ${birthFormatted}%0A WhatsApp: ${data.phone}%0A Carro: ${data.car}%0A Sujeira: ${data.dirtLevel}%0A Serviço: ${data.service}%0A Data: ${serviceDateFormatted}%0A Horário: ${data.time}`;
             
-            const whatsappOficina = "55679992820395";
+            const whatsappOficina = "556792820395";
             window.open(`https://wa.me/${whatsappOficina}?text=${message}`, '_blank');
             
             this.close();
