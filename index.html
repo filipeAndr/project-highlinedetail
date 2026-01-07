@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighLine Detail</title>
+    
+    <link rel="icon" href="./src/assets/img/logo-HLD.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./src/js/tailwind.config.js"></script> <script type="module" src="./src/js/main.js" defer></script>
+</head>
+<body class="bg-[#0A0A0A] text-[#F4F4F9] antialiased">
+
+    <app-navbar></app-navbar>
+    
+    <app-hero></app-hero>
+    
+    <section id="servicos" class="py-20 bg-[#161616]">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display text-3xl font-bold uppercase mb-12">Nossos <span class="text-[#D90429]">Serviços</span></h2>
+            
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                </div>
+        </div>
+    </section>
+
+    <app-about></app-about>
+    <app-modal></app-modal>
+    <app-service-detail-modal></app-service-detail-modal>
+    <app-footer></app-footer>
+
+</body>
+</html>
