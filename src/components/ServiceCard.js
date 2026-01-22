@@ -23,19 +23,12 @@ export function createServiceCard(service) {
                     <button onclick="openServiceDetails('${service.id}')" class="w-full py-3 border border-[#D90429] text-[#D90429] hover:bg-[#D90429] hover:text-white font-bold rounded uppercase text-sm tracking-wide transition-all">
                         Mais Informações
                     </button>
-                    
+
                 </div>
             </div>
         </div>
     `;
 }
-
-// Funções globais auxiliares
-window.directToWhatsapp = (title, price) => {
-    const phoneNumber = "55679992820395"; 
-    const text = `Olá! Vi no site o *${title}* (a partir de R$ ${price}) e gostaria de agendar um horário.`;
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, '_blank');
-};
 
 window.openServiceDetails = (serviceId) => {
     const event = new CustomEvent('open-service-details', { detail: serviceId });
