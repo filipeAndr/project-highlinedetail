@@ -1,6 +1,6 @@
 export function createServiceCard(service) {
     return `
-        <div class="group bg-[#161616] rounded-xl border border-[#2B2B2B] hover:border-[#D90429] transition-all duration-300 overflow-hidden flex flex-col h-full">
+        <div id="services" class="group bg-[#161616] rounded-xl border border-[#2B2B2B] hover:border-[#D90429] transition-all duration-300 overflow-hidden flex flex-col h-full">
             
             <div class="h-48 overflow-hidden relative">
                 <img src="${service.image}" alt="${service.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">

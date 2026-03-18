@@ -11,7 +11,7 @@ class AppNavbar extends HTMLElement {
                     <div class="hidden md:flex space-x-8 text-sm font-medium text-white">
                         <a href="#home" class="hover:text-[#D90429] transition-colors">HOME</a>
                         <a href="#services" class="hover:text-[#D90429] transition-colors">SERVIÇOS</a>
-                        <a href="#about" class="hover:text-[#D90429] transition-colors">A OFICINA</a>
+                        <a href="#sobre" class="hover:text-[#D90429] transition-colors">A OFICINA</a>
                     </div>
 
                     <button id="nav-cta" class="hidden md:block px-6 py-2 border border-[#D90429] text-[#D90429] font-bold rounded hover:bg-[#D90429] hover:text-white transition-all btn-glow uppercase text-sm tracking-wide">
