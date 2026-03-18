@@ -27,7 +27,7 @@ class AppNavbar extends HTMLElement {
                     <div class="flex flex-col p-6 space-y-4 text-center">
                         <a href="#home" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">HOME</a>
                         <a href="#services" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">SERVIÇOS</a>
-                        <a href="#about" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">A OFICINA</a>
+                        <a href="#sobre" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">A OFICINA</a>
                         <button id="mobile-cta" class="w-full mt-4 px-6 py-3 bg-[#D90429] text-white font-bold rounded uppercase tracking-wide hover:bg-red-700">
                             Agendar Agora
                         </button>
