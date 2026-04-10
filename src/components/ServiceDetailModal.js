@@ -7,7 +7,6 @@ class ServiceDetailModal extends HTMLElement {
     }
 
     render() {
-        // ... (O HTML do render permanece igual, vou focar nas mudanças de lógica)
         this.innerHTML = `
             <div id="detailModal" class="fixed inset-0 z-[110] hidden">
                 <div id="detail-backdrop" class="absolute inset-0 bg-black/95 backdrop-blur-sm transition-opacity"></div>

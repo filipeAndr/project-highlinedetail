@@ -36,12 +36,18 @@ class AppFooter extends HTMLElement {
                                 Atendimento
                             </h4>
                             <ul class="space-y-4">
-                                <li class="flex items-start gap-3">
+                                <li class="grid items-start gap-3">
+                                    <svg class="w-5 h-5 text-[#D90429] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                                    <div>
+                                        <strong class="text-white block"> Nossa garagem </strong>
+                                        <p class="text-xs mt-1 leading-relaxed">O serviço é realizado na nossa garagem no centro de campo grande, venha conhecer!</p>
+                                    </div>
                                     <svg class="w-5 h-5 text-[#D90429] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                                     <div>
                                         <strong class="text-white block">Domicílio (Delivery)</strong>
                                         <p class="text-xs mt-1 leading-relaxed">O serviço é realizado na sua garagem ou através do sistema Leva e Traz.</p>
                                     </div>
+                                    
                                 </li>
                             </ul>
                         </div>
@@ -61,9 +67,9 @@ class AppFooter extends HTMLElement {
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <svg class="w-5 h-5 text-[#D90429] mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                    <a href="https://maps.google.com" target="_blank" class="hover:text-white transition-colors leading-relaxed">
-                                        Rua Rafael Hardi, 227 <br>
-                                        Conjunto José Abrão <br>
+                                    <a href="https://www.google.com/maps/place/R.+Padre+Jo%C3%A3o+Crippa,+1998+-+Centro,+Campo+Grande+-+MS,+79002-390/@-20.455695,-54.6139421,17z/data=!3m1!4b1!4m6!3m5!1s0x9486e627bb28f21f:0x3cbd4ae62918ff02!8m2!3d-20.4557!4d-54.6113672!16s%2Fg%2F11nnt08q0l?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="hover:text-white transition-colors leading-relaxed">
+                                        R. Padre João Cripa, 1998 <br>
+                                        Monte Castelo, Centro <br>
                                         Campo Grande - MS
                                     </a>
                                 </li>
