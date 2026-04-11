@@ -280,7 +280,7 @@ class AppModal extends HTMLElement {
         let message = `NOVO AGENDAMENTO SITE %0A%0A`;
         message += `*Nome:* ${data.name}%0A`;
         message += `*Nasc:* ${birthFormatted}%0A`;
-        message += `*Carro:* ${data.car}%0A`;
+        message += `*Veículo:* ${data.car}%0A`;
         message += `*Sujeira:* ${data.dirtLevel}%0A`;
         
         // Se for pacote mostra "Pacote", se for individual mostra "Serviços Avulsos: X + Y + Z"
