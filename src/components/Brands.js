@@ -7,17 +7,18 @@ class AppBrands extends HTMLElement {
         // LISTA DE MARCAS: Adicione os caminhos das suas imagens aqui.
         // Dica: Imagens PNG com fundo transparente funcionam melhor.
         const brands = [
-            { name: "AlcancePro", src: "./src/assets/parceiros/alcancePro.png" },
+            { name: "Vonixx", src: "./src/assets/parceiros/vonixx.png" },
             { name: "Cadillac", src: "./src/assets/parceiros/cadillac.png" },
-            { name: "Carpro", src: "./src/assets/parceiros/carPro.jpeg" },
+            { name: "Alcance", src: "./src/assets/parceiros/alcancePro.png" },
             { name: "EasyTech", src: "./src/assets/parceiros/easytech.png" },
-            { name: "KCX", src: "./src/assets/parceiros/kcx.jpeg" },
             { name: "NobreCar", src: "./src/assets/parceiros/nobrecar.png" },
             { name: "Soft99", src: "./src/assets/parceiros/soft99.png" },
-            { name: "Sonax", src: "./src/assets/parceiros/sonax.png" },
             { name: "Swissvax", src: "./src/assets/parceiros/swissvax.png" },
-            { name: "TP", src: "./src/assets/parceiros/tp.png" },
-            { name: "Vonixx", src: "./src/assets/parceiros/vonixx.png" }
+            { name: "Carpro", src: "./src/assets/parceiros/carPro.jpeg" },
+            { name: "Sonax", src: "./src/assets/parceiros/sonax.png" },
+            { name: "Koach Chemie", src: "./src/assets/parceiros/kcx.jpeg" },
+            { name: "TP", src: "./src/assets/parceiros/tp.png" }
+            
         ];
 
         const brandsHTML = brands.map(brand => `
