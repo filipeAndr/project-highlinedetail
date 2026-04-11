@@ -26,7 +26,7 @@ class AppServiceTable extends HTMLElement {
             { name: "Polimento Comercial", prices: ["350", "500", "650", "800", "1200"] },
             { name: "Polimento Técnico", prices: ["500", "700", "950", "1300", "1900"] },
             { name: "Preparação pra Venda", prices: ["550", "800", "1200", "1800", "2500"] },
-            { name: "Vitrificação de Pintura (5 anos)", prices: ["800", "1300", "1800", "2500", "3200"], highlight: true }
+            { name: "Vitrificação de Pintura (5 anos)", prices: ["800", "1300", "1800", "2500", "3200"], highlight: false }
         ];
 
         // Função interna para montar as linhas dinamicamente no novo layout responsivo
