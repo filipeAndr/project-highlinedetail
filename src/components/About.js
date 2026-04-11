@@ -11,9 +11,11 @@ class AppAbout extends HTMLElement {
                         
                         <div class="w-full lg:w-1/2">
                             <div class="relative rounded-lg p-2 border border-[#2B2B2B]">
-                                <div class="absolute inset-0 bg-[#D90429] blur opacity-20"></div> <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=1000&auto=format&fit=crop" 
+                                <div class="absolute inset-0 bg-[#D90429] blur opacity-20"></div> 
+                                
+                                <img src="./src/assets/img/foto-equipe.jpeg" 
                                      alt="Equipe Highline Detail" 
-                                     class="relative w-full h-[400px] object-cover rounded shadow-2xl grayscale hover:grayscale-0 transition-all duration-500">
+                                     class="relative w-full h-auto md:h-full object-contain md:object-cover rounded shadow-2xl">
                                 
                                 <div class="absolute -bottom-6 -right-6 bg-[#161616] p-6 rounded border border-[#2B2B2B] shadow-xl hidden md:block">
                                     <p class="text-[#D90429] font-bold text-3xl font-display">100%</p>

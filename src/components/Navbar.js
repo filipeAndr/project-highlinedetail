@@ -5,12 +5,14 @@ class AppNavbar extends HTMLElement {
                 <div class="container mx-auto px-6 flex justify-between items-center relative">
                     
                     <a href="#" class="font-display text-2xl font-bold tracking-wider italic text-white">
-                        HIGHLINE<span class="text-[#D90429]">DETAIL</span>
+                        HIGHLINE 
+                        <span class="text-[#D90429]">DETAIL</span>
                     </a>
 
                     <div class="hidden md:flex space-x-8 text-sm font-medium text-white">
                         <a href="#home" class="hover:text-[#D90429] transition-colors">HOME</a>
-                        <a href="#services" class="hover:text-[#D90429] transition-colors">SERVIÇOS</a>
+                        <a href="#servicos" class="hover:text-[#D90429] transition-colors">SERVIÇOS</a>
+                        <a href="#servicos-individuais" class="hover:text-[#D90429] transition-colors">PREÇOS</a>
                         <a href="#sobre" class="hover:text-[#D90429] transition-colors">A OFICINA</a>
                     </div>
 
@@ -26,7 +28,8 @@ class AppNavbar extends HTMLElement {
                 <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#161616] border-b border-[#2B2B2B] shadow-2xl">
                     <div class="flex flex-col p-6 space-y-4 text-center">
                         <a href="#home" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">HOME</a>
-                        <a href="#services" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">SERVIÇOS</a>
+                        <a href="#servicos" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">SERVIÇOS</a>
+                        <a href="#servicos-individuais" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">PREÇOS</a>
                         <a href="#sobre" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">A OFICINA</a>
                         <button id="mobile-cta" class="w-full mt-4 px-6 py-3 bg-[#D90429] text-white font-bold rounded uppercase tracking-wide hover:bg-red-700">
                             Agendar Agora

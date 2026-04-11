@@ -2,65 +2,46 @@
 
 export const services = [
     {
-        id: "fast",
-        title: "Pacote Fast",
+        id: "Bronze",
+        title: "Pacote Bronze",
         subtitle: "Limpeza Rápida & Eficiente",
-        price: { hatch: "119,90", suv: "159,90" },
+        price: { hatch: "320,00", sedan: "360,00", suv: "480,00", camionete: "600,00", luxo: "760,00" },
         image: "./src/assets/img/fig4.png", // Troque pela foto do Fast
         description: [
-            "Lavagem externa técnica",
-            "Aspiração interna",
-            "Limpeza de vidros",
-            "Selante de pneus",
-            "Selante de pintura"    
+            "Limpeza Simples",
+            "Aromatizante",
+            "Sanitização",
+            "Selante de pneus"    
         ]
     },
     {
-        id: "premium",
-        title: "Pacote Premium",
+        id: "prata",
+        title: "Pacote Prata",
         subtitle: "O campeão de vendas",
-        price: { hatch: "229,90", suv: "379,90" },
+        price: { hatch: "350,00", sedan: "405,00", suv: "545,00", camionete: "680,00", luxo: "880,00" },
         image: "./src/assets/img/fig2.png", // Troque pela foto do produto azul (Vonixx)
         description: [
-            "Todos os itens do Pacote Fast",
-            "Descontaminação de pintura e vidros",
-            "Aplicação de selante sintético",
-            "Hidratação de plásticos externos",
-            "Limpeza técnica de caixa de rodas",
-            "Cristalização de vidros",
-            "Aromatizante e sanitizante"
+            "Limpeza Simples",
+            "Aromatizante",
+            "Sanitização",
+            "Selante de pneus",
+            "Enceramento de pintura"
         ]
     },
     {
-        id: "signature",
-        title: "Pacote Signature",
+        id: "ouro",
+        title: "Pacote Ouro",
         subtitle: "Correção e Brilho",
-        price: { hatch: "599,90", suv: "799,90" },
+        price: { hatch: "850,00", sedan: "1110,00", suv: "1370,00", camionete: "1670,00", luxo: "2380,00" },
         image: "./src/assets/img/fig1.png", // Troque pela foto da politriz
         description: [
-            "Todos os itens do Pacote Premium",
-            "Limpeza externa detalhada",
-            "Limpeza interna detalhada",
-            "Descontaminação de pintura e vidros",
-            "Polimento",
-            "Tratamento de plásticos e Couro",
-            "Cristalização de vidros",
-        ]
-    },
-    {
-        id: "highline",
-        title: "Pacote Highline",
-        subtitle: "O Estado da Arte (Full Detail)",
-        price: { hatch: "1.399,90", suv: "1.999,90" },
-        image:"./src/assets/img/fig3.png", // Foto do V-Paint
-        // Lista copiada exatamente da sua imagem de referência
-        description: [
-            "Todos os itens do Pacote Signature",
-            "Higienização interna a vapor",
-            "Polimento técnico",
-            "Vitrificação",
-            "Limpeza e proteção de motor",
-            "Limpeza e proteção de rodas e caixas de rodas"
+            "Limpeza Detalhada",
+            "Aromatizante",
+            "Sanitização",
+            "Selante de pneus",
+            "Selante de pintura",
+            "Hidratação de Plásticos",
+            "Hidratação de Couros"
         ]
     }
 ];
