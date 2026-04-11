@@ -9,7 +9,7 @@ class AppBrands extends HTMLElement {
         const brands = [
             { name: "AlcancePro", src: "./src/assets/parceiros/alcancePro.png" },
             { name: "Cadillac", src: "./src/assets/parceiros/cadillac.png" },
-            { name: "Carpro", src: "./src/assets/parceiros/carPro.png" },
+            { name: "Carpro", src: "./src/assets/parceiros/carPro.jpeg" },
             { name: "EasyTech", src: "./src/assets/parceiros/easytech.png" },
             { name: "KCX", src: "./src/assets/parceiros/kcx.jpeg" },
             { name: "NobreCar", src: "./src/assets/parceiros/nobrecar.png" },

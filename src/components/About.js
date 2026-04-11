@@ -13,7 +13,7 @@ class AppAbout extends HTMLElement {
                             <div class="relative rounded-lg p-2 border border-[#2B2B2B]">
                                 <div class="absolute inset-0 bg-[#D90429] blur opacity-20"></div> 
                                 
-                                <img src="./src/assets/img/foto-equipe.jpeg" 
+                                <img src="./src/assets/img/foto-equipe3-efi.jpeg" 
                                      alt="Equipe Highline Detail" 
                                      class="relative w-full h-auto md:h-full object-contain md:object-cover rounded shadow-2xl">
                                 
