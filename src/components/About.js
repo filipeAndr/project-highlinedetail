@@ -17,7 +17,7 @@ class AppAbout extends HTMLElement {
                                      alt="Equipe Highline Detail" 
                                      class="relative w-full h-auto md:h-full object-contain md:object-cover rounded shadow-2xl">
                                 
-                                <div class="absolute -bottom-6 -right-6 bg-[#161616] p-6 rounded border border-[#2B2B2B] shadow-xl hidden md:block">
+                                <div class="absolute -bottom-2 -left-6 bg-[#161616] p-6 rounded border border-[#2B2B2B] shadow-xl hidden md:block">
                                     <p class="text-[#D90429] font-bold text-3xl font-display">100%</p>
                                     <p class="text-xs text-white uppercase tracking-wider">Foco no Detalhe</p>
                                 </div>
