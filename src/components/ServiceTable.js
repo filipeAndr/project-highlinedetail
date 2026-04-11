@@ -8,7 +8,7 @@ class AppServiceTable extends HTMLElement {
         // Abaixo temos os dados para gerar as linhas da tabela/cards
         const servicesData = [
             { name: "Hidratação de Couro", prices: ["40", "50", "60", "70", "100"] },
-            { name: "Enceramento para 6 meses", prices: ["30", "45", "65", "80", "120"] },
+            { name: "Enceramento para 3 meses", prices: ["30", "45", "65", "80", "120"] },
             { name: "Limpeza de Ar Condicionado", prices: ["30", "40", "50", "60", "100"] },
             { name: "Verniz de Motor", prices: ["40", "50", "80", "100", "180"] },
             { name: "Selante de Pintura (8 meses)", prices: ["50", "70", "90", "110", "180"] },
