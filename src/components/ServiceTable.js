@@ -8,10 +8,10 @@ class AppServiceTable extends HTMLElement {
         // Abaixo temos os dados para gerar as linhas da tabela/cards
         const servicesData = [
             { name: "Hidratação de Couro", prices: ["40", "50", "60", "70", "100"] },
-            { name: "Enceramento para 3 meses", prices: ["30", "45", "65", "80", "120"] },
+            { name: "Enceramento", prices: ["30", "45", "65", "80", "120"] },
             { name: "Limpeza de Ar Condicionado", prices: ["30", "40", "50", "60", "100"] },
             { name: "Verniz de Motor", prices: ["40", "50", "80", "100", "180"] },
-            { name: "Selante de Pintura (8 meses)", prices: ["50", "70", "90", "110", "180"] },
+            { name: "Selante de Pintura", prices: ["50", "70", "90", "110", "180"] },
             { name: "Hidratação de Plásticos", prices: ["40", "50", "60", "70", "100"] },
             { name: "Cristalização de Vidros", prices: ["75", "90", "120", "150", "250"] },
             { name: "Higienização de Couros", prices: ["80", "120", "150", "180", "220"] },
@@ -21,12 +21,12 @@ class AppServiceTable extends HTMLElement {
             { name: "Higienização de Tecidos", prices: ["150", "170", "190", "220", "280"] },
             { name: "Limpeza de Chassi", prices: ["150", "180", "220", "280", "350"] },
             { name: "Polimento de Farol", prices: ["150", "200", "300", "380", "550"] },
-            { name: "Vitrificação de Plásticos (1 ano)", prices: ["150", "280", "400", "580", "720"] },
+            { name: "Vitrificação de Plásticos", prices: ["150", "280", "400", "580", "720"] },
             { name: "Vitrificação de Farol", prices: ["180", "220", "380", "450", "800"] },
             { name: "Polimento Comercial", prices: ["350", "500", "650", "800", "1200"] },
             { name: "Polimento Técnico", prices: ["500", "700", "950", "1300", "1900"] },
             { name: "Preparação pra Venda", prices: ["550", "800", "1200", "1800", "2500"] },
-            { name: "Vitrificação de Pintura (5 anos)", prices: ["800", "1300", "1800", "2500", "3200"], highlight: false }
+            { name: "Vitrificação de Pintura", prices: ["800", "1300", "1800", "2500", "3200"], highlight: false }
         ];
 
         // Função interna para montar as linhas dinamicamente no novo layout responsivo
@@ -98,7 +98,6 @@ class AppServiceTable extends HTMLElement {
                         </div>
                         
                         <div class="bg-[#0A0A0A] p-6 text-center border-t border-[#2B2B2B]">
-                            <p class="text-xs text-[#A0A0A0] mb-4">* Os valores podem sofrer pequenas alterações após a avaliação presencial do veículo.</p>
                             <button id="btn-agendar-avulso" class="px-8 py-3 bg-[#D90429] text-white font-bold rounded uppercase tracking-wider hover:bg-red-700 transition-colors btn-glow w-full md:w-auto">
                                 Agendar Serviço Individual
                             </button>
