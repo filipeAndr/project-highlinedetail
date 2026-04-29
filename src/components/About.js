@@ -8,8 +8,13 @@ class AppAbout extends HTMLElement {
 
                 <div class="container mx-auto px-6 relative z-10">
                     <div class="flex flex-col lg:flex-row items-center gap-16">
+
+                        
                         
                         <div class="w-full lg:w-1/2">
+                            <div class="inline-block border border-[#D90429] text-[#D90429] text-[10px] font-bold tracking-[0.2em] px-4 py-1 mb-8 uppercase">
+                                Equipe de Excelência
+                            </div>
                             <div class="relative rounded-lg p-2 border border-[#2B2B2B]">
                                 <div class="absolute inset-0 bg-[#D90429] blur opacity-20"></div> 
                                 
