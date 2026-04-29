@@ -10,6 +10,7 @@ import '../components/About.js';
 import '../components/ServiceTable.js';
 import '../components/Service.js'; 
 import '../components/Brands.js';
+import '../components/Maintenance.js'; 
 
 document.addEventListener('DOMContentLoaded', () => {
 
