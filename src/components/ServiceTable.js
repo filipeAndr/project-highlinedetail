@@ -20,8 +20,8 @@ class AppServiceTable extends HTMLElement {
             { name: "Cristalização de Vidros", prices: ["60,00", "90,00", "150,00"] },
             { name: "Polimento de Farol", prices: ["200,00", "200,00", "400,00"] },
             { name: "Restauração de Farol", prices: ["450,00", "450,00", "800,00"] },
-            { name: "Polimento Comercial & Vitrificação", prices: ["700,00", "950,00", "1.500,00"] },
-            { name: "Polimento Técnico & Vitrificação", prices: ["1.250,00", "1.600,00", "2.150,00"], highlight: false }
+            { name: "Polimento Comercial & Vitrificação de 1 ano", prices: ["700,00", "950,00", "1.500,00"] },
+            { name: "Polimento Técnico & Vitrificação de 5 anos", prices: ["1.250,00", "1.600,00", "2.150,00"], highlight: false }
         ];
 
         // Função interna para montar as linhas em 3 colunas de preços
