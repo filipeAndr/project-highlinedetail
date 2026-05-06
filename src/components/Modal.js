@@ -53,9 +53,7 @@ class AppModal extends HTMLElement {
                                 <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-1">Serviço Principal</label>
                                 <select id="input-service" class="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded p-3 text-white focus:border-[#D90429] focus:outline-none">
                                     <option value="" disabled selected>Escolha um plano...</option>
-                                    <option value="Pacote Bronze">Pacote Bronze</option>
-                                    <option value="Pacote Prata">Pacote Prata</option>
-                                    <option value="Pacote Ouro">Pacote Ouro</option>
+                                    <option value="Pacote Mensal">Pacote Mensal</option>
                                     <option value="Plano Individual">Serviços Individuais (Avulsos)</option>
                                 </select>
                             </div>
@@ -65,87 +63,63 @@ class AppModal extends HTMLElement {
                                 
                                 <div class="grid grid-cols-1 gap-3 max-h-40 overflow-y-auto custom-scrollbar">
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Enceramento para 3 meses" class="mr-3 w-4 h-4 accent-[#D90429]"> Enceramento para 3 meses
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Limpeza de Ar Condicionado" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza de Ar Condicionado
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Verniz de Motor" class="mr-3 w-4 h-4 accent-[#D90429]"> Verniz de Motor
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Selante de Pintura 8 meses" class="mr-3 w-4 h-4 accent-[#D90429]"> Selante de Pintura 8 meses
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Hidratação de Plásticos" class="mr-3 w-4 h-4 accent-[#D90429]"> Hidratação de Plásticos
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Cristalização de Vidros" class="mr-3 w-4 h-4 accent-[#D90429]"> Cristalização de Vidros
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Higienização de Couros" class="mr-3 w-4 h-4 accent-[#D90429]"> Higienização de Couros
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Limpeza Simples" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza Simples
                                     </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Limpeza de Motor" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza de Motor
-                                    </label>
-                                    
+
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Limpeza Detalhada" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza Detalhada
                                     </label>
-                                    
+
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Higienização de Tecidos" class="mr-3 w-4 h-4 accent-[#D90429]"> Higienização de Tecidos
+                                        <input type="checkbox" value="Higienização Interna" class="mr-3 w-4 h-4 accent-[#D90429]"> Higienização Interna
                                     </label>
-                                    
+
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Limpeza de Chassi" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza de Chassi
+                                        <input type="checkbox" value="Impermeabilização de Tecidos" class="mr-3 w-4 h-4 accent-[#D90429]"> Impermeabilização de Tecidos
                                     </label>
-                                    
+
+                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
+                                        <input type="checkbox" value="Hidratante de Plásticos" class="mr-3 w-4 h-4 accent-[#D90429]"> Hidratante de Plásticos
+                                    </label>
+
+                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
+                                        <input type="checkbox" value="Hidratante de Couros" class="mr-3 w-4 h-4 accent-[#D90429]"> Hidratante de Couros
+                                    </label>
+
+                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
+                                        <input type="checkbox" value="Vitrificação de Couros" class="mr-3 w-4 h-4 accent-[#D90429]"> Vitrificação de Couros
+                                    </label>
+
+                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
+                                        <input type="checkbox" value="Vitrificação de Plásticos" class="mr-3 w-4 h-4 accent-[#D90429]"> Vitrificação de Plásticos
+                                    </label>
+
+                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
+                                        <input type="checkbox" value="Limpeza e Proteção de Chassi" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza e Proteção de Chassi
+                                    </label>
+
+                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
+                                        <input type="checkbox" value="Limpeza e Proteção de Motor" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza e Proteção de Motor
+                                    </label>
+
+                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
+                                        <input type="checkbox" value="Cristalização de Vidros" class="mr-3 w-4 h-4 accent-[#D90429]"> Cristalização de Vidros
+                                    </label>
+
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Polimento de Farol" class="mr-3 w-4 h-4 accent-[#D90429]"> Polimento de Farol
                                     </label>
-                                    
+
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Vitrificação de Plásticos 1 ano" class="mr-3 w-4 h-4 accent-[#D90429]"> Vitrificação de Plásticos 1 ano
+                                        <input type="checkbox" value="Restauração de Farol" class="mr-3 w-4 h-4 accent-[#D90429]"> Restauração de Farol
                                     </label>
-                                    
+
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Vitrificação de Farol" class="mr-3 w-4 h-4 accent-[#D90429]"> Vitrificação de Farol
+                                        <input type="checkbox" value="Polimento Comercial & Vitrificação" class="mr-3 w-4 h-4 accent-[#D90429]"> Polimento Comercial & Vitrificação de 1 ano
                                     </label>
-                                    
+
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Polimento Comercial" class="mr-3 w-4 h-4 accent-[#D90429]"> Polimento Comercial
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Polimento Técnico" class="mr-3 w-4 h-4 accent-[#D90429]"> Polimento Técnico
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Preparação pra Venda" class="mr-3 w-4 h-4 accent-[#D90429]"> Preparação pra Venda
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Vitrificação de Pintura 5 anos" class="mr-3 w-4 h-4 accent-[#D90429]"> Vitrificação de Pintura 5 anos
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Hidratação de Plásticos" class="mr-3 w-4 h-4 accent-[#D90429]"> Hidratação de Plásticos
-                                    </label>
-                                    
-                                    <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
-                                        <input type="checkbox" value="Hidratação de Couro" class="mr-3 w-4 h-4 accent-[#D90429]"> Hidratação de Couro
+                                        <input type="checkbox" value="Polimento Técnico & Vitrificação" class="mr-3 w-4 h-4 accent-[#D90429]"> Polimento Técnico & Vitrificação de 5 anos
                                     </label>
                                 </div>
                             </div>

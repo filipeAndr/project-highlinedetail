@@ -30,19 +30,10 @@ class ServiceDetailModal extends HTMLElement {
                                 <p class="text-xs text-[#A0A0A0] uppercase mb-3 font-bold">Selecione o tamanho do veículo:</p>
                                 <div class="grid grid-cols-2 gap-2">
                                     <button class="type-selector flex-1 py-2 px-4 rounded border border-[#2B2B2B] text-sm font-bold text-[#A0A0A0] hover:text-white transition-all active-type" data-type="hatch">
-                                        HATCH
-                                    </button>
-                                    <button class="type-selector flex-1 py-2 px-4 rounded border border-[#2B2B2B] text-sm font-bold text-[#A0A0A0] hover:text-white transition-all" data-type="sedan">
-                                        SEDAN
+                                        HATCH/SEDAN
                                     </button>
                                     <button class="type-selector flex-1 py-2 px-4 rounded border border-[#2B2B2B] text-sm font-bold text-[#A0A0A0] hover:text-white transition-all active-type" data-type="suv">
-                                        SUV
-                                    </button>
-                                    <button class="type-selector flex-1 py-2 px-4 rounded border border-[#2B2B2B] text-sm font-bold text-[#A0A0A0] hover:text-white transition-all" data-type="camionete">
-                                        CAMIONETE
-                                    </button>
-                                    <button class="type-selector flex-1 py-2 px-4 rounded border border-[#2B2B2B] text-sm font-bold text-[#A0A0A0] hover:text-white transition-all" data-type="luxo">
-                                        LUXO
+                                        SUV/CAMINONETE
                                     </button>
                                 </div>
                                 <div class="mt-4 pt-4 border-t border-[#2B2B2B] flex justify-between items-end">
