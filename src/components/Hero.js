@@ -14,9 +14,9 @@ class AppHero extends HTMLElement {
                     <h2 class="text-brand-red font-bold tracking-widest text-sm mb-4 uppercase animate-fade-in-up">
                         Estética Automotiva de Alto Padrão
                     </h2>
-                    
-                    <h1 class="font-display text-5xl md:text-7xl font-extrabold uppercase leading-tight mb-6 text-glow text-white">
-                        O seu veículo <br> novo de novo
+
+                    <h1 class="font-display text-4xl md:text-7xl font-extrabold uppercase leading-tight mb-6 text-glow text-white">
+                        Tudo que tem <br> lata motor e roda <br> <span class="text-brand-red">merece cuidado</span>
                     </h1>
                     
                     <p class="text-brand-muted text-lg md:text-xl mb-10 max-w-2xl mx-auto">
