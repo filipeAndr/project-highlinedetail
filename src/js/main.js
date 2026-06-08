@@ -7,10 +7,11 @@ import '../components/Modal.js';
 import '../components/Footer.js';
 import '../components/ServiceDetailModal.js';
 import '../components/About.js';
-import '../components/ServiceTable.js';
+import '../components/ServiceGrid.js';
 import '../components/Service.js'; 
 import '../components/Brands.js';
 import '../components/Maintenance.js'; 
+import '../components/VideoSection.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 

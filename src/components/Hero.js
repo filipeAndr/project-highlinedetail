@@ -29,7 +29,7 @@ class AppHero extends HTMLElement {
                             Agendar Serviço
                         </button>
                         
-                        <a href="#servicos" class="px-8 py-4 bg-transparent border border-gray-600 text-white font-bold rounded text-lg hover:border-white transition-all uppercase">
+                        <a href="#pacote" class="px-8 py-4 bg-transparent border border-gray-600 text-white font-bold rounded text-lg hover:border-white transition-all uppercase">
                             Ver Catálogo
                         </a>
                     </div>

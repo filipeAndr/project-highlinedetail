@@ -32,15 +32,7 @@ export function createServiceCard(service) {
 
                 <div class="flex-grow min-h-[1rem] md:min-h-[2rem]"></div>
 
-                <div class="mt-4 mb-8 pt-6 border-t border-[#2B2B2B]/60">
-                    <span class="block text-[10px] font-bold text-[#A0A0A0] uppercase tracking-widest mb-2">
-                        A partir de
-                    </span>
-                    <div class="flex items-center justify-center gap-1">
-                        <span class="text-[#D90429] font-bold text-2xl mt-1">R$</span>
-                        <span class="text-5xl font-black text-white tracking-tighter">${service.price.hatch}</span>
-                    </div>
-                </div>
+                
 
                 <!-- O botão foi ajustado para chamar o modal com mais peso -->
                 <button onclick="openServiceDetails('${service.id}')" class="w-full py-5 bg-transparent border border-[#333] text-white hover:border-[#D90429] hover:bg-[#D90429] font-bold rounded flex justify-center items-center gap-3 uppercase text-sm tracking-widest transition-all duration-300">
