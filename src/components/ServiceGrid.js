@@ -7,21 +7,21 @@ class AppServiceGrid extends HTMLElement {
     render() {
         // Agora temos apenas a lista limpa com os nomes dos serviços
         const services = [
-            "Limpeza Simples",
-            "Limpeza Detalhada",
-            "Higienização Interna",
-            "Impermeabilização de Tecidos",
-            "Hidratação de Plásticos",
-            "Hidratação de Couros",
-            "Vitrificação de Couros",
-            "Vitrificação de Plásticos",
-            "Limpeza e Proteção de Chassi",
-            "Limpeza e Proteção de Motor",
-            "Cristalização de Vidros",
-            "Polimento de Farol",
+            "Limpeza Técnica",
+            "Limpeza Técnica Detalhada",
+            "Higienização Interna Técnica",
+            "Proteção Total para Tecidos",
+            "Revitalização de Plásticos",
+            "Revitalização de Couros",
+            "Descontaminação e Proteção de Chassi",
+            "Detalhamento Técnico do Motor",
+            "Proteção Total para Vidros",
             "Restauração de Farol",
-            "Polimento Comercial & Vitrificação de 1 ano",
-            "Polimento Técnico & Vitrificação de 5 anos"
+            "Proteção Ceramic 1 Ano",
+            "Correção de Pintura & Coating Cerâmico para 5 anos",
+            "PPF (Paint Protection Film) Frontal",
+            "PPF (Paint Protection Film) Full",
+            "PPF (Paint Protection Film) Estratégico"
         ];
 
         // Cria a grade de cards elegantes
