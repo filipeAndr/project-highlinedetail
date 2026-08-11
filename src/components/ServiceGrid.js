@@ -55,7 +55,7 @@ class AppServiceGrid extends HTMLElement {
                             Serviços <span class="text-[#D90429]">Avulsos</span>
                         </h2>
                         <p class="text-[#A0A0A0] max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-                            Além dos nossos pacotes premium, oferecemos uma gama completa de serviços individuais focados na restauração, proteção e manutenção de cada detalhe do seu veículo.
+                            Oferecemos uma gama completa de serviços individuais focados na restauração, proteção e manutenção de cada detalhe do seu veículo.
                         </p>
                     </div>
 
