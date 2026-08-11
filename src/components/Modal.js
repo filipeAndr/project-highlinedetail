@@ -3,7 +3,6 @@ class AppModal extends HTMLElement {
         this.render();
         this.setupElements();
         this.setupEvents();
-        this.restrictDates();
     }
 
     render() {
@@ -11,16 +10,16 @@ class AppModal extends HTMLElement {
             <div id="bookingModal" class="fixed inset-0 z-[100] hidden">
                 <div id="modal-backdrop" class="absolute inset-0 bg-black/90 backdrop-blur-sm transition-opacity cursor-pointer"></div>
                 
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#161616] border border-[#2B2B2B] rounded-lg shadow-2xl p-8 w-full max-w-md mx-4 h-[90vh] overflow-y-auto custom-scrollbar">
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#161616] border border-[#2B2B2B] rounded-lg shadow-2xl p-8 w-full max-w-md mx-4 h-auto max-h-[90vh] flex flex-col">
                     
-                    <div class="flex justify-between items-center mb-6">
+                    <div class="flex justify-between items-center mb-6 flex-shrink-0">
                         <h3 class="font-display text-2xl font-bold text-white uppercase">
                             Agendar <span class="text-[#D90429]">Serviço</span>
                         </h3>
                         <button id="close-btn" class="text-[#A0A0A0] hover:text-white text-3xl leading-none">&times;</button>
                     </div>
 
-                    <form id="bookingForm">
+                    <form id="bookingForm" class="flex-grow overflow-y-auto custom-scrollbar pr-2">
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-1">Seu Nome</label>
@@ -28,128 +27,74 @@ class AppModal extends HTMLElement {
                             </div>
 
                             <div>
-                                <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-1">Data de Nascimento</label>
-                                <input type="date" id="input-birth" class="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded p-3 text-white focus:border-[#D90429] focus:outline-none" required>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-1">Modelo do Carro</label>
-                                    <input type="text" id="input-car" class="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded p-3 text-white focus:border-[#D90429] focus:outline-none" placeholder="Ex: BMW 320i" required>
-                                </div>
-                                
-                                <div>
-                                    <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-1">Nível de Sujeira</label>
-                                    <select id="input-dirt" class="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded p-3 text-white focus:border-[#D90429] focus:outline-none">
-                                        <option value="Leve">Leve (Poeira)</option>
-                                        <option value="Médio">Médio (Chuva/Terra)</option>
-                                        <option value="Pesado">Pesado (Barro/Lama)</option>
-                                        <option value="Extremo">Extremo (Mofo/Pelos)</option>
-                                    </select>
-                                </div>
+                                <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-1">Modelo do Carro</label>
+                                <input type="text" id="input-car" class="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded p-3 text-white focus:border-[#D90429] focus:outline-none" placeholder="Ex: BMW 320i" required>
                             </div>
                             
                             <div>
                                 <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-1">Serviço Principal</label>
-                                <select id="input-service" class="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded p-3 text-white focus:border-[#D90429] focus:outline-none">
+                                <select id="input-service" class="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded p-3 text-white focus:border-[#D90429] focus:outline-none" required>
                                     <option value="" disabled selected>Escolha um plano...</option>
-                                    <option value="Pacote Mensal">Pacote Mensal</option>
                                     <option value="Plano Individual">Serviços Individuais (Avulsos)</option>
+                                    <!-- Adicione outros pacotes aqui se necessário -->
                                 </select>
                             </div>
 
                             <div id="individual-services-container" class="hidden bg-[#0A0A0A] border border-[#2B2B2B] rounded p-4 mt-2">
-                                <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-3 border-b border-[#2B2B2B] pb-2">Selecione os Serviços (Pode marcar vários)</label>
+                                <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-3 border-b border-[#2B2B2B] pb-2">Selecione os Serviços</label>
                                 
-                                <div class="grid grid-cols-1 gap-3 max-h-40 overflow-y-auto custom-scrollbar">
+                                <div class="grid grid-cols-1 gap-3">
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Limpeza Simples" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza Simples
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Limpeza Detalhada" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza Detalhada
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Higienização Interna" class="mr-3 w-4 h-4 accent-[#D90429]"> Higienização Interna
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Impermeabilização de Tecidos" class="mr-3 w-4 h-4 accent-[#D90429]"> Impermeabilização de Tecidos
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Hidratante de Plásticos" class="mr-3 w-4 h-4 accent-[#D90429]"> Hidratante de Plásticos
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Hidratante de Couros" class="mr-3 w-4 h-4 accent-[#D90429]"> Hidratante de Couros
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Vitrificação de Couros" class="mr-3 w-4 h-4 accent-[#D90429]"> Vitrificação de Couros
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Vitrificação de Plásticos" class="mr-3 w-4 h-4 accent-[#D90429]"> Vitrificação de Plásticos
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Limpeza e Proteção de Chassi" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza e Proteção de Chassi
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Limpeza e Proteção de Motor" class="mr-3 w-4 h-4 accent-[#D90429]"> Limpeza e Proteção de Motor
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Cristalização de Vidros" class="mr-3 w-4 h-4 accent-[#D90429]"> Cristalização de Vidros
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Polimento de Farol" class="mr-3 w-4 h-4 accent-[#D90429]"> Polimento de Farol
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Restauração de Farol" class="mr-3 w-4 h-4 accent-[#D90429]"> Restauração de Farol
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Polimento Comercial & Vitrificação" class="mr-3 w-4 h-4 accent-[#D90429]"> Polimento Comercial & Vitrificação de 1 ano
                                     </label>
-
                                     <label class="flex items-center text-sm text-white hover:text-[#D90429] cursor-pointer transition-colors">
                                         <input type="checkbox" value="Polimento Técnico & Vitrificação" class="mr-3 w-4 h-4 accent-[#D90429]"> Polimento Técnico & Vitrificação de 5 anos
                                     </label>
                                 </div>
                             </div>
-
-                            <div class="grid grid-cols-2 gap-4 mt-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-1">Data do Serviço</label>
-                                    <input type="date" id="input-date" class="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded p-3 text-white focus:border-[#D90429] focus:outline-none" required>
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-[#A0A0A0] uppercase mb-1">Horário</label>
-                                    <select id="input-time" class="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded p-3 text-white focus:border-[#D90429] focus:outline-none" required>
-                                        <option value="" disabled selected>Selecione...</option>
-                                        <option value="08:00">08:00</option>
-                                        <option value="09:00">09:00</option>
-                                        <option value="10:00">10:00</option>
-                                        <option value="11:00">11:00</option>
-                                        <option value="13:00">13:00</option>
-                                        <option value="14:00">14:00</option>
-                                        <option value="15:00">15:00</option>
-                                        <option value="16:00">16:00</option>
-                                        <option value="17:00">17:00</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
                         </div>
 
-                        <button type="submit" id="submit-btn" class="w-full mt-8 bg-[#D90429] text-white font-bold py-4 rounded hover:bg-[#B00220] transition-all uppercase tracking-wider btn-glow disabled:opacity-50 disabled:cursor-not-allowed">
-                            Confirmar Agendamento
+                        <button type="submit" id="submit-btn" class="w-full mt-6 mb-2 bg-[#D90429] text-white font-bold py-4 rounded hover:bg-[#B00220] transition-all uppercase tracking-wider btn-glow disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0">
+                            Solicitar Orçamento
                         </button>
                     </form>
                 </div>
@@ -165,11 +110,7 @@ class AppModal extends HTMLElement {
     setupElements() {
         this.modal = this.querySelector('#bookingModal');
         this.form = this.querySelector('#bookingForm');
-        this.dateInput = this.querySelector('#input-date');
-        this.timeInput = this.querySelector('#input-time');
         this.submitBtn = this.querySelector('#submit-btn');
-        this.birthInput = this.querySelector('#input-birth');
-        this.dirtInput = this.querySelector('#input-dirt');
         this.serviceInput = this.querySelector('#input-service');
         this.individualContainer = this.querySelector('#individual-services-container');
     }
@@ -180,7 +121,6 @@ class AppModal extends HTMLElement {
         this.querySelector('#modal-backdrop').addEventListener('click', () => this.close());
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
 
-        // Evento que mostra/esconde a lista de serviços individuais
         this.serviceInput.addEventListener('change', (e) => {
             if (e.target.value === 'Plano Individual') {
                 this.individualContainer.classList.remove('hidden');
@@ -190,91 +130,48 @@ class AppModal extends HTMLElement {
         });
     }
 
-    restrictDates() {
-        const today = new Date();
-        const yyyy = today.getFullYear();
-        const mm = String(today.getMonth() + 1).padStart(2, '0');
-        const dd = String(today.getDate()).padStart(2, '0');
-        
-        const todayString = `${yyyy}-${mm}-${dd}`;
-        this.dateInput.min = todayString;
-        this.birthInput.max = todayString;
-    }
-
     handleSubmit(e) {
         e.preventDefault();
         
         const mainService = this.serviceInput.value;
         let finalServiceString = mainService;
 
-        // VALIDAÇÃO: Se escolheu "Plano Individual", tem que ter marcado pelo menos um checkbox
         if (mainService === 'Plano Individual') {
             const checkedBoxes = this.querySelectorAll('#individual-services-container input[type="checkbox"]:checked');
             
             if (checkedBoxes.length === 0) {
                 alert("Por favor, selecione pelo menos um serviço individual na lista.");
-                return; // Interrompe o envio
+                return; 
             }
 
-            // Pega o valor de todas as caixas marcadas e junta com uma vírgula
             const selectedServicesArray = Array.from(checkedBoxes).map(checkbox => checkbox.value);
             finalServiceString = "Avulsos (" + selectedServicesArray.join(' + ') + ")";
         }
 
         const data = {
             name: this.querySelector('#input-name').value,
-            birthDate: this.birthInput.value, 
             car: this.querySelector('#input-car').value,
-            dirtLevel: this.dirtInput.value, 
-            service: finalServiceString, // Variável processada
-            date: this.dateInput.value,
-            time: this.timeInput.value
+            service: finalServiceString 
         };
-
-        if (!data.time) {
-            alert("Por favor, selecione um horário válido.");
-            return;
-        }
 
         this.submitBtn.innerText = "Processando...";
         this.submitBtn.disabled = true;
 
-        // Formatação da Data do Serviço
-        const serviceDateObj = new Date(data.date);
-        const serviceDateFormatted = new Date(serviceDateObj.valueOf() + serviceDateObj.getTimezoneOffset() * 60000).toLocaleDateString('pt-BR');
-        
-        // Formatação da Data de Nascimento
-        let birthFormatted = data.birthDate;
-        if (birthFormatted) {
-            const bDate = new Date(birthFormatted);
-            birthFormatted = new Date(bDate.valueOf() + bDate.getTimezoneOffset() * 60000).toLocaleDateString('pt-BR');
-        }
-
-        // Montagem Dinâmica da Mensagem do WhatsApp
         let message = `NOVO AGENDAMENTO SITE %0A%0A`;
         message += `*Nome:* ${data.name}%0A`;
-        message += `*Nasc:* ${birthFormatted}%0A`;
         message += `*Veículo:* ${data.car}%0A`;
-        message += `*Sujeira:* ${data.dirtLevel}%0A`;
         
-        // Se for pacote mostra "Pacote", se for individual mostra "Serviços Avulsos: X + Y + Z"
         if (mainService === 'Plano Individual') {
-            message += `*Serviços:* ${data.service}%0A`;
+            message += `*Serviços:* ${data.service}`;
         } else {
-            message += `*Pacote:* ${data.service}%0A`;
+            message += `*Pacote:* ${data.service}`;
         }
-
-        message += `*Data:* ${serviceDateFormatted}%0A`;
-        message += `*Horário:* ${data.time}`;
         
         const whatsappOficina = "556792820395";
         window.open(`https://wa.me/${whatsappOficina}?text=${message}`, '_blank');
         
-        // Restaura o modal após enviar
         this.close();
         this.form.reset(); 
-        
-        // Reseta o estado do container individual caso feche e abra de novo
         this.individualContainer.classList.add('hidden');
         
         this.submitBtn.innerText = "CONFIRMAR AGENDAMENTO";

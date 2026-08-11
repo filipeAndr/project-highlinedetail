@@ -26,7 +26,7 @@ class AppHero extends HTMLElement {
                     
                     <div class="flex flex-col md:flex-row gap-4 justify-center">
                         <button id="hero-cta" class="px-8 py-4 bg-brand-red text-white font-bold rounded text-lg hover:bg-brand-darkRed transition-all btn-glow uppercase">
-                            Agendar Serviço
+                            Solicitar Orçamento
                         </button>
                         
                         <a href="#pacote" class="px-8 py-4 bg-transparent border border-gray-600 text-white font-bold rounded text-lg hover:border-white transition-all uppercase">

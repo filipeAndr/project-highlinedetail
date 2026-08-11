@@ -12,14 +12,13 @@ class AppNavbar extends HTMLElement {
                     <div class="hidden md:flex space-x-8 text-sm font-medium text-white">
                         <a href="#home" class="hover:text-[#D90429] transition-colors">HOME</a>
                         <a href="#sobre" class="hover:text-[#D90429] transition-colors">A OFICINA</a>
-                        <a href="#pacote" class="hover:text-[#D90429] transition-colors">PACOTE</a>
                         <a href="#servicos-individuais" class="hover:text-[#D90429] transition-colors">SERVIÇOS</a>
                         <a href="#parceiros" class="hover:text-[#D90429] transition-colors">PARCEIROS</a>
                         
                     </div>
 
                     <button id="nav-cta" class="hidden md:block px-6 py-2 border border-[#D90429] text-[#D90429] font-bold rounded hover:bg-[#D90429] hover:text-white transition-all btn-glow uppercase text-sm tracking-wide">
-                        Agendar Agora
+                        Solicitar Orçamento
                     </button>
 
                     <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
@@ -31,12 +30,11 @@ class AppNavbar extends HTMLElement {
                     <div class="flex flex-col p-6 space-y-4 text-center">
                         <a href="#home" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">HOME</a>
                         <a href="#sobre" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">A OFICINA</a>
-                        <a href="#pacote" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">PACOTE</a>
                         <a href="#servicos-individuais" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">SERVIÇOS</a>
                         <a href="#parceiros" class="mobile-link text-white font-medium hover:text-[#D90429] py-2 border-b border-[#2B2B2B]">PARCEIROS</a>
                         
                         <button id="mobile-cta" class="w-full mt-4 px-6 py-3 bg-[#D90429] text-white font-bold rounded uppercase tracking-wide hover:bg-red-700">
-                            Agendar Agora
+                            Solicitar Orçamento
                         </button>
                     </div>
                 </div>
